@@ -1,5 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.bbva.rubi</groupId>
@@ -15,7 +15,19 @@
 	<properties>
 		<osgi.version.manifest>0.0</osgi.version.manifest>
 	</properties>
-	<dependencies/>
+	<dependencies>
+		<dependency>
+			<groupId>com.bbva.rubi.dto.ssai</groupId>
+			<artifactId>RUBICE01</artifactId>
+			<version>0.1.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.bbva.rubi.dto.ssai</groupId>
+			<artifactId>RUBICE01</artifactId>
+			<version>0.1.0-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
 	<build>
 		<finalName>${project.artifactId}</finalName>
 		<plugins>
@@ -39,9 +51,9 @@
 					<execution>
 						<phase>install</phase>
 						<configuration>
-							<tasks>
-								<copy todir="${outputDirectoryLibraries}" file="./target/${project.artifactId}.jar" />
-							</tasks>
+							<target>
+								<copy todir="${outputDirectoryLibraries}" file="./target/${project.artifactId}.jar"/>
+							</target>
 						</configuration>
 						<goals>
 							<goal>run</goal>

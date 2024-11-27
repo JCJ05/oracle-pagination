@@ -10,4 +10,11 @@ public abstract class AbstractRUBITE0101PETransaction extends AbstractTransactio
 	public AbstractRUBITE0101PETransaction(){
 	}
 
+
+	/**
+	 * Set value for String output parameter hash
+	 */
+	protected void setHash(final String field){
+		this.addParameter("hash", field);
+	}
 }

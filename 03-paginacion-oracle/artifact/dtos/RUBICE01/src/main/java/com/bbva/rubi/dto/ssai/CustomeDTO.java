@@ -1,6 +1,7 @@
 package com.bbva.rubi.dto.ssai;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
@@ -10,85 +11,111 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  * The CustomeDTO class...
  */
 public class CustomeDTO implements Serializable  {
-	private static final long serialVersionUID = 2931699728946643245L;
 
-	/* Attributes section for the DTO */
+	private String customerId;
+	private String firstName;
+	private String lastName;
+	private String gender;
+	private String documentNumber;
+	private String documentType;
+	private Date birthDate;
+	private String address;
+	private String nationality;
+	private String email;
 
-	/**
-	 * The name attribute
-	 */
-	private String name;
-
-	/**
-	 * The surname attribute
-	 */
-	private String surname;
-
-	/**
-	 * Get the name attribute
-	 */
-	public String getName() {
-		return this.name;
+	public String getCustomerId() {
+		return customerId;
 	}
 
-	/**
-	 * Set the name attribute
-	 */
-	public void setName(final String name) {
-		this.name = name;
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
 	}
 
-	/**
-	 * Get the surname attribute
-	 */
-	public String getSurname() {
-		return this.surname;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	/**
-	 * Set the surname attribute
-	 */
-	public void setSurname(final String surname) {
-		this.surname = surname;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	/**
-	 * Indicates whether some other object is "equal to" this one.
-	 */
-	@Override
-	public boolean equals(final Object obj) {
-		if (obj == null) { return false; }
-		if (obj == this) { return true; }
-		if (obj.getClass() != getClass()) {
-			return false;
-		}
-		final CustomeDTO rhs = (CustomeDTO) obj;
-		return new EqualsBuilder().appendSuper(super.equals(obj))
-					.append(name, rhs.name)
-					.append(surname, rhs.surname)
-					.isEquals();
+	public String getLastName() {
+		return lastName;
 	}
 
-	/**
-	 * Returns a hash code value for the object.
-	 */
-	@Override
-	public int hashCode() {
-		return new HashCodeBuilder()
-			.append(this.name)
-			.append(this.surname)
-			.toHashCode();
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
-	/**
-	 * Returns a string representation of the object.
-	 * It is important to OBFUSCATE the attributes that are sensitive to show in the representation.
-	 */
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getDocumentNumber() {
+		return documentNumber;
+	}
+
+	public void setDocumentNumber(String documentNumber) {
+		this.documentNumber = documentNumber;
+	}
+
+	public String getDocumentType() {
+		return documentType;
+	}
+
+	public void setDocumentType(String documentType) {
+		this.documentType = documentType;
+	}
+
+	public Date getBirthDate() {
+		return birthDate;
+	}
+
+	public void setBirthDate(Date birthDate) {
+		this.birthDate = birthDate;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getNationality() {
+		return nationality;
+	}
+
+	public void setNationality(String nationality) {
+		this.nationality = nationality;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	@Override
 	public String toString() {
-		return new ToStringBuilder(this)
-			.append("name", name)
-			.append("surname", surname)
-			.toString();
+		return "CustomeDTO{" +
+				"customerId='" + customerId + '\'' +
+				", firstName='" + firstName + '\'' +
+				", lastName='" + lastName + '\'' +
+				", gender='" + gender + '\'' +
+				", documentNumber='" + documentNumber + '\'' +
+				", documentType='" + documentType + '\'' +
+				", birthDate=" + birthDate +
+				", address='" + address + '\'' +
+				", nationality='" + nationality + '\'' +
+				", email='" + email + '\'' +
+				'}';
 	}
 }

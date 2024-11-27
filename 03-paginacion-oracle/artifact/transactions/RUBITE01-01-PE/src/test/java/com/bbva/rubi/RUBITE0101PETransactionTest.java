@@ -8,6 +8,7 @@ import com.bbva.elara.domain.transaction.request.header.CommonRequestHeader;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.bbva.rubi.lib.re01.RUBIRE01;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,6 +16,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -24,6 +26,9 @@ public class RUBITE0101PETransactionTest {
 	private Map<String, Object> parameters;
 
 	private Map<Class<?>, Object> serviceLibraries;
+
+	@Autowired
+	private RUBIRE01 rubire01;
 
 	@Mock
 	private ApplicationConfigurationService applicationConfigurationService;

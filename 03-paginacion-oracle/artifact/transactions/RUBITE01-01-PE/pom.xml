@@ -26,6 +26,16 @@
 			<artifactId>mockito-core</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.bbva.rubi.dto.ssai</groupId>
+			<artifactId>RUBICE01</artifactId>
+			<version>0.1.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.bbva.rubi</groupId>
+			<artifactId>RUBIRE01</artifactId>
+			<version>0.1.0-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>${project.artifactId}</finalName>
@@ -57,9 +67,9 @@
 							<goal>run</goal>
 						</goals>
 						<configuration>
-							<tasks>
-								<copy file="./target/${project.artifactId}.jar" todir="${outputDirectoryTransactions}" />
-							</tasks>
+							<target>
+								<copy file="./target/${project.artifactId}.jar" todir="${outputDirectoryTransactions}"/>
+							</target>
 						</configuration>
 					</execution>
 				</executions>
