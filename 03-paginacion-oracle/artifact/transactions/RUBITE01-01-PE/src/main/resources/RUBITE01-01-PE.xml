@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transaction xmlns="http://www.w3schools.com" transactionName="RUBITE01" application="RUBI" version="01" country="PE" language="ES">
+	<paramsIn/>
+	<paramsOut/>
+	<description>Generacion de archivo CSV</description>
+</transaction>

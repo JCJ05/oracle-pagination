@@ -5,12 +5,14 @@
 		<artifactId>03-paginacion-oracle</artifactId>
 		<groupId>com.bbva.rubi</groupId>
 		<version>0.1.0-SNAPSHOT</version>
-		<relativePath>../../pom.xml</relativePath>
+		<relativePath>../../</relativePath>
 	</parent>
 	<groupId>com.bbva.rubi</groupId>
 	<artifactId>TRANSACTIONS-03-paginacion-oracle</artifactId>
 	<version>0.1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>TRANSACTIONS-03-paginacion-oracle</name>
-	<modules/>
+	<modules>
+		<module>RUBITE01-01-PE</module>
+	</modules>
 </project>
